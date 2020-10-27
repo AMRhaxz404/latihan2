@@ -47,7 +47,7 @@
 						<li><a href="#"><i class="fa fa-map-marker"></i> ketapang, kalimantan Barat, Indonesia</a></li>
 					</ul>
 					<ul class="header-links pull-right">
-						<li><a href="#"><i class="fa fa-dollar"></i> Rp </a></li>
+						
 						<li><a href="login"><i class="fa fa-user-o"></i> Login </a></li>
 					</ul>
 				</div>
@@ -136,7 +136,7 @@
 										</div>
 										<div class="cart-btns">
 											<a href="#">View Cart</a>
-											<a href="#">Checkout  <i class="fa fa-arrow-circle-right"></i></a>
+											<a href="checkout">Checkout  <i class="fa fa-arrow-circle-right"></i></a>
 										</div>
 									</div>
 								</div>
@@ -200,7 +200,7 @@
 							</div>
 							<div class="shop-body">
 								<h3>Laptop<br>Collection</h3>
-								<a href="detail-produk" class="cta-btn">Shop now <i class="fa fa-arrow-circle-right"></i></a>
+								<a href="product" class="cta-btn">Shop now <i class="fa fa-arrow-circle-right"></i></a>
 							</div>
 						</div>
 					</div>
@@ -214,7 +214,7 @@
 							</div>
 							<div class="shop-body">
 								<h3>Accessories<br>Collection</h3>
-								<a href="detail-produk" class="cta-btn">Shop now <i class="fa fa-arrow-circle-right"></i></a>
+								<a href="product" class="cta-btn">Shop now <i class="fa fa-arrow-circle-right"></i></a>
 							</div>
 						</div>
 					</div>
@@ -228,7 +228,7 @@
 							</div>
 							<div class="shop-body">
 								<h3>Cameras<br>Collection</h3>
-								<a href="detail-produk" class="cta-btn">Shop now <i class="fa fa-arrow-circle-right"></i></a>
+								<a href="product" class="cta-btn">Shop now <i class="fa fa-arrow-circle-right"></i></a>
 							</div>
 						</div>
 					</div>
@@ -281,7 +281,7 @@
 											</div>
 											<div class="product-body">
 												<p class="product-category">Category</p>
-												<h3 class="product-name"><a href="detail-produk">product name goes here</a></h3>
+												<h3 class="product-name"><a href="product">product name goes here</a></h3>
 												<h4 class="product-price">$980.00 <del class="product-old-price">$990.00</del></h4>
 												<div class="product-rating">
 													<i class="fa fa-star"></i>
@@ -312,7 +312,7 @@
 											</div>
 											<div class="product-body">
 												<p class="product-category">Category</p>
-												<h3 class="product-name"><a href="detail-produk">product name goes here</a></h3>
+												<h3 class="product-name"><a href="product">product name goes here</a></h3>
 												<h4 class="product-price">$980.00 <del class="product-old-price">$990.00</del></h4>
 												<div class="product-rating">
 													<i class="fa fa-star"></i>
@@ -343,7 +343,7 @@
 											</div>
 											<div class="product-body">
 												<p class="product-category">Category</p>
-												<h3 class="product-name"><a href="detail-produk">product name goes here</a></h3>
+												<h3 class="product-name"><a href="product">product name goes here</a></h3>
 												<h4 class="product-price">$980.00 <del class="product-old-price">$990.00</del></h4>
 												<div class="product-rating">
 												</div>
@@ -366,7 +366,7 @@
 											</div>
 											<div class="product-body">
 												<p class="product-category">Category</p>
-												<h3 class="product-name"><a href="detail-produk">product name goes here</a></h3>
+												<h3 class="product-name"><a href="product">product name goes here</a></h3>
 												<h4 class="product-price">$980.00 <del class="product-old-price">$990.00</del></h4>
 												<div class="product-rating">
 													<i class="fa fa-star"></i>
@@ -394,7 +394,7 @@
 											</div>
 											<div class="product-body">
 												<p class="product-category">Category</p>
-												<h3 class="product-name"><a href="detail-produk">product name goes here</a></h3>
+												<h3 class="product-name"><a href="product">product name goes here</a></h3>
 												<h4 class="product-price">$980.00 <del class="product-old-price">$990.00</del></h4>
 												<div class="product-rating">
 													<i class="fa fa-star"></i>
@@ -1077,7 +1077,7 @@
 							</ul>
 							<span class="copyright">
 								<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-								Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | Muhammad Amrin Mukhodas<i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="http://campuran-gaje.blogspot.com/" target="_blank">OLSHOP KAMPUS</a>
+								Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | Olshop Kampus by <a href="http://campuran-gaje.blogspot.com/" target="_blank">Muhammad Amrin Mukhodas</a>
 							<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
 							</span>
 						</div>

@@ -6,26 +6,26 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		 <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
-		<title>Electro - HTML Ecommerce Template</title>
+		<title>Product</title>
 
  		<!-- Google font -->
  		<link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700" rel="stylesheet">
 
  		<!-- Bootstrap -->
- 		<link type="text/css" rel="stylesheet" href="css/bootstrap.min.css"/>
+ 		<link type="text/css" rel="stylesheet" href="{{url('system')}}/css/bootstrap.min.css"/>
 
  		<!-- Slick -->
- 		<link type="text/css" rel="stylesheet" href="css/slick.css"/>
- 		<link type="text/css" rel="stylesheet" href="css/slick-theme.css"/>
+ 		<link type="text/css" rel="stylesheet" href="{{url('system')}}/css/slick.css"/>
+ 		<link type="text/css" rel="stylesheet" href="{{url('system')}}/css/slick-theme.css"/>
 
  		<!-- nouislider -->
- 		<link type="text/css" rel="stylesheet" href="css/nouislider.min.css"/>
+ 		<link type="text/css" rel="stylesheet" href="{{url('system')}}/css/nouislider.min.css"/>
 
  		<!-- Font Awesome Icon -->
- 		<link rel="stylesheet" href="css/font-awesome.min.css">
+ 		<link rel="stylesheet" href="{{url('system')}}/css/font-awesome.min.css">
 
  		<!-- Custom stlylesheet -->
- 		<link type="text/css" rel="stylesheet" href="css/style.css"/>
+ 		<link type="text/css" rel="stylesheet" href="{{url('system')}}/css/style.css"/>
 
 		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -42,13 +42,13 @@
 			<div id="top-header">
 				<div class="container">
 					<ul class="header-links pull-left">
-						<li><a href="#"><i class="fa fa-phone"></i> +021-95-51-84</a></li>
-						<li><a href="#"><i class="fa fa-envelope-o"></i> email@email.com</a></li>
-						<li><a href="#"><i class="fa fa-map-marker"></i> 1734 Stonecoal Road</a></li>
+						<li><a href="#"><i class="fa fa-phone"></i> +62-89524526934</a></li>
+						<li><a href="#"><i class="fa fa-envelope-o"></i> olshopkampus@gmail.com</a></li>
+						<li><a href="#"><i class="fa fa-map-marker"></i> ketapang, kalimantan Barat, Indonesia</a></li>
 					</ul>
 					<ul class="header-links pull-right">
-						<li><a href="#"><i class="fa fa-dollar"></i> USD</a></li>
-						<li><a href="#"><i class="fa fa-user-o"></i> My Account</a></li>
+						
+						<li><a href="login"><i class="fa fa-user-o"></i> Login </a></li>
 					</ul>
 				</div>
 			</div>
@@ -64,7 +64,7 @@
 						<div class="col-md-3">
 							<div class="header-logo">
 								<a href="#" class="logo">
-									<img src="./img/logo.png" alt="">
+									<img src="{{url('system')}}/img/olshopkampus.jpg" width="100px" height="100px">
 								</a>
 							</div>
 						</div>
@@ -110,7 +110,7 @@
 										<div class="cart-list">
 											<div class="product-widget">
 												<div class="product-img">
-													<img src="./img/product01.png" alt="">
+													<img src="{{url('system')}}/img/product01.png" alt="">
 												</div>
 												<div class="product-body">
 													<h3 class="product-name"><a href="#">product name goes here</a></h3>
@@ -121,7 +121,7 @@
 
 											<div class="product-widget">
 												<div class="product-img">
-													<img src="./img/product02.png" alt="">
+													<img src="{{url('system')}}/img/product02.png" alt="">
 												</div>
 												<div class="product-body">
 													<h3 class="product-name"><a href="#">product name goes here</a></h3>
@@ -160,7 +160,7 @@
 			</div>
 			<!-- /MAIN HEADER -->
 		</header>
-		<!-- /HEADER -->
+		<!-- /HEADER -->>
 
 		<!-- NAVIGATION -->
 		<nav id="navigation">
@@ -170,7 +170,7 @@
 				<div id="responsive-nav">
 					<!-- NAV -->
 					<ul class="main-nav nav navbar-nav">
-						<li class="active"><a href="#">Home</a></li>
+						<li class="active"><a href="main">Home</a></li>
 						<li><a href="#">Hot Deals</a></li>
 						<li><a href="#">Categories</a></li>
 						<li><a href="#">Laptops</a></li>
@@ -194,7 +194,7 @@
 				<div class="row">
 					<div class="col-md-12">
 						<ul class="breadcrumb-tree">
-							<li><a href="#">Home</a></li>
+							<li><a href="main">Home</a></li>
 							<li><a href="#">All Categories</a></li>
 							<li><a href="#">Accessories</a></li>
 							<li><a href="#">Headphones</a></li>
@@ -218,19 +218,19 @@
 					<div class="col-md-5 col-md-push-2">
 						<div id="product-main-img">
 							<div class="product-preview">
-								<img src="./img/product01.png" alt="">
+								<img src="{{url('system')}}/img/product01.png" alt="">
 							</div>
 
 							<div class="product-preview">
-								<img src="./img/product03.png" alt="">
+								<img src="{{url('system')}}/img/product03.png" alt="">
 							</div>
 
 							<div class="product-preview">
-								<img src="./img/product06.png" alt="">
+								<img src="{{url('system')}}/img/product06.png" alt="">
 							</div>
 
 							<div class="product-preview">
-								<img src="./img/product08.png" alt="">
+								<img src="{{url('system')}}/img/product08.png" alt="">
 							</div>
 						</div>
 					</div>
@@ -240,19 +240,19 @@
 					<div class="col-md-2  col-md-pull-5">
 						<div id="product-imgs">
 							<div class="product-preview">
-								<img src="./img/product01.png" alt="">
+								<img src="{{url('system')}}/img/product01.png" alt="">
 							</div>
 
 							<div class="product-preview">
-								<img src="./img/product03.png" alt="">
+								<img src="{{url('system')}}/img/product03.png" alt="">
 							</div>
 
 							<div class="product-preview">
-								<img src="./img/product06.png" alt="">
+								<img src="{{url('system')}}/img/product06.png" alt="">
 							</div>
 
 							<div class="product-preview">
-								<img src="./img/product08.png" alt="">
+								<img src="{{url('system')}}/img/product08.png" alt="">
 							</div>
 						</div>
 					</div>
@@ -566,7 +566,7 @@
 					<div class="col-md-3 col-xs-6">
 						<div class="product">
 							<div class="product-img">
-								<img src="./img/product01.png" alt="">
+								<img src="{{url('system')}}/img/product01.png" alt="">
 								<div class="product-label">
 									<span class="sale">-30%</span>
 								</div>
@@ -594,7 +594,7 @@
 					<div class="col-md-3 col-xs-6">
 						<div class="product">
 							<div class="product-img">
-								<img src="./img/product02.png" alt="">
+								<img src="{{url('system')}}/img/product02.png" alt="">
 								<div class="product-label">
 									<span class="new">NEW</span>
 								</div>
@@ -629,7 +629,7 @@
 					<div class="col-md-3 col-xs-6">
 						<div class="product">
 							<div class="product-img">
-								<img src="./img/product03.png" alt="">
+								<img src="{{url('system')}}/img/product03.png" alt="">
 							</div>
 							<div class="product-body">
 								<p class="product-category">Category</p>
@@ -659,7 +659,7 @@
 					<div class="col-md-3 col-xs-6">
 						<div class="product">
 							<div class="product-img">
-								<img src="./img/product04.png" alt="">
+								<img src="{{url('system')}}/img/product04.png" alt="">
 							</div>
 							<div class="product-body">
 								<p class="product-category">Category</p>
@@ -820,12 +820,12 @@
 		<!-- /FOOTER -->
 
 		<!-- jQuery Plugins -->
-		<script src="js/jquery.min.js"></script>
-		<script src="js/bootstrap.min.js"></script>
-		<script src="js/slick.min.js"></script>
-		<script src="js/nouislider.min.js"></script>
-		<script src="js/jquery.zoom.min.js"></script>
-		<script src="js/main.js"></script>
+		<script src="{{url('system')}}/js/jquery.min.js"></script>
+		<script src="{{url('system')}}/js/bootstrap.min.js"></script>
+		<script src="{{url('system')}}/js/slick.min.js"></script>
+		<script src="{{url('system')}}/js/nouislider.min.js"></script>
+		<script src="{{url('system')}}/js/jquery.zoom.min.js"></script>
+		<script src="{{url('system')}}/js/main.js"></script>
 
 	</body>
 </html>

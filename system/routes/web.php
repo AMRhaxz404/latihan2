@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('main');
 });
 
 Route::get('/main', function () {
@@ -43,4 +43,49 @@ Route::get('/login', function () {
 
 Route::get('/detail-produk', function () {
     return view('detail-produk');
+});
+
+Route::get('/promo', function () {
+    return view('promo');
+});
+
+Route::get('/pelanggan', function () {
+    return view('pelanggan');
+});
+
+Route::get('/supplier', function () {
+    return view('supplier');
+});
+
+
+Route::get('/form', function () {
+    return view('form');
+});
+
+Route::get('/admin', function () {
+    return view('admin');
+});
+
+Route::get('/table', function () {
+    return view('table');
+});
+
+Route::get('/tab-panel', function () {
+    return view('tab-panel');
+});
+
+Route::get('/produk-admin', function () {
+    return view('produk-admin');
+});
+
+Route::get('/login-admin', function () {
+    return view('login-admin');
+});
+
+Route::get('/registrasi', function () {
+    return view('registrasi');
+});
+
+Route::get('/kategori', function () {
+    return view('kategori');
 });

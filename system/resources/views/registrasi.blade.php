@@ -34,47 +34,35 @@
 			<div class="wrap-login100">
 				<form class="login100-form validate-form">
 					<span class="login100-form-title p-b-43">
-						Login Untuk Melanjutkan
+						Daftar Sekarang Untuk Melanjutkan
 					</span>
 					
-					<div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
-						<input class="input100" type="text" name="email">
+					<div class="wrap-input100 validate-input">
+						<input class="input100" type="text" name placeholder="Nama Pengguna">
 						<span class="focus-input100"></span>
-						<span class="label-input100">Email</span>
+					</div>
+
+
+					<div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
+						<input class="input100" type="text" name placeholder="email">
+						<span class="focus-input100"></span>
+					</div>
+					
+					<div class="wrap-input100 validate-input" data-validate="Password is required">
+						<input class="input100" type="password" name placeholder="pass">
+						<span class="focus-input100"></span>>
 					</div>
 					
 					
 					<div class="wrap-input100 validate-input" data-validate="Password is required">
-						<input class="input100" type="password" name="pass">
+						<input class="input100" type="password" name placeholder="pass">
 						<span class="focus-input100"></span>
-						<span class="label-input100">Password</span>
-					</div>
-
-					<div class="flex-sb-m w-full p-t-3 p-b-32">
-						<div class="contact100-form-checkbox">
-							<input class="input-checkbox100" id="ckb1" type="checkbox" name="remember-me">
-							<label class="label-checkbox100" for="ckb1">
-								Ingat Saya
-							</label>
-						</div>
-
-						<div>
-							<a href="registrasi" class="txt1">
-								Buat Akun
-							</a>
-						</div>
-
-						<div>
-							<a href="#" class="txt1">
-								Lupa Password?
-							</a>
-						</div>
 					</div>
 			
 
 					<div class="container-login100-form-btn">
 						<button class="login100-form-btn">
-							<a href="main"> Login </a>
+							<a href="main"> Daftar </a>
 						</button>
 					</div>
 					
