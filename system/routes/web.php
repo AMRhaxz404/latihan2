@@ -1,6 +1,10 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\AuthController;
+use App\Http\Controllers\ProdukController;
+use App\Http\Controllers\ClientProdukController;
 
 /*
 |--------------------------------------------------------------------------
@@ -11,81 +15,48 @@ use Illuminate\Support\Facades\Route;
 | routes are loaded by the RouteServiceProvider within a group which
 | contains the "web" middleware group. Now create something great!
 |
-*/
+*/  
 
 Route::get('/', function () {
     return view('main');
-});
+}); 
 
-Route::get('/main', function () {
-    return view('main');
-});
+// wilayah client
+// Route::get('main', [ClientProdukController:: class, 'showIndex']);
 
-Route::get('/blank', function () {
-    return view('blank');
-});
+Route::get('checkout', [HomeController::class, 'showCheckout']);
+Route::get('product', [HomeController::class, 'showProduct']);
+Route::get('store', [HomeController::class, 'showStore']);
+Route::get('login', [AuthController::class, 'showLogin']);
+Route::get('detail-produk', [HomeController::class, 'showDetailproduk']);
+Route::get('form', [HomeController::class, 'showForm']);
 
-Route::get('/checkout', function () {
-    return view('checkout');
-});
+Route::get('product', [ClientProdukController::class, 'showMain']);
+Route::get('produk-client/{product}', [ClientProdukController::class, 'show']);
 
-Route::get('/product', function () {
-    return view('product');
-});
-
-Route::get('/store', function () {
-    return view('store');
-});
-
-Route::get('/login', function () {
-    return view('login');
-});
-
-Route::get('/detail-produk', function () {
-    return view('detail-produk');
-});
-
-Route::get('/promo', function () {
-    return view('promo');
-});
-
-Route::get('/pelanggan', function () {
-    return view('pelanggan');
-});
-
-Route::get('/supplier', function () {
-    return view('supplier');
-});
+Route::get('main', [ClientProdukController:: class, 'showMainIndex']);
+Route::get('detail-produk', [ClientProdukController::class, 'showDetail']);
 
 
-Route::get('/form', function () {
-    return view('form');
-});
 
-Route::get('/admin', function () {
-    return view('admin');
-});
 
-Route::get('/table', function () {
-    return view('table');
-});
+// wilayah admin
+Route::get('admin', [HomeController::class, 'showAdmin']);
 
-Route::get('/tab-panel', function () {
-    return view('tab-panel');
-});
+Route::get('login-admin', [AuthController::class, 'showLoginadmin']);
+Route::get('registrasi', [HomeController::class, 'showRegistrasi']);
+Route::get('kategori', [HomeController::class, 'showKategori']);
+Route::get('promo', [HomeController::class, 'showPromo']);
+Route::get('pelanggan', [HomeController::class, 'showPelanggan']);
+Route::get('supplier', [HomeController::class, 'showSupplier']);
+// Route::get('table', [HomeController::class, 'showTable']);
+// Route::get('tab-panel', [HomeController::class, 'showTabpanel']);
 
-Route::get('/produk-admin', function () {
-    return view('produk-admin');
-});
+Route::get('produk-admin', [ProdukController::class, 'index']);
+Route::get('produk/create', [ProdukController::class, 'create']);
+Route::post('produk-admin', [ProdukController::class, 'store']);
+Route::get('produk/{produk}', [ProdukController::class, 'show']);
+Route::get('produk/{produk}/edit', [ProdukController::class, 'edit']);
+Route::put('produk/{produk}', [ProdukController::class, 'update']);
+Route::delete('produk/{produk}', [ProdukController::class, 'destroy']);
 
-Route::get('/login-admin', function () {
-    return view('login-admin');
-});
-
-Route::get('/registrasi', function () {
-    return view('registrasi');
-});
-
-Route::get('/kategori', function () {
-    return view('kategori');
-});
