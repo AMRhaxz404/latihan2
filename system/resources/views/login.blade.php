@@ -33,10 +33,13 @@
 		<div class="container-login100">
 			<div class="wrap-login100">
 				<form class="login100-form validate-form">
+					
 					<span class="login100-form-title p-b-43">
 						Login Untuk Melanjutkan
 					</span>
-					
+					@include('template.utils.notif')
+                    <form  action="{{url('login')}}" method="post">
+                    @csrf 
 					<div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
 						<input class="input100" type="text" name="email">
 						<span class="focus-input100"></span>
@@ -45,7 +48,7 @@
 					
 					
 					<div class="wrap-input100 validate-input" data-validate="Password is required">
-						<input class="input100" type="password" name="pass">
+						<input class="input100" type="password" name="password">
 						<span class="focus-input100"></span>
 						<span class="label-input100">Password</span>
 					</div>
@@ -70,13 +73,14 @@
 							</a>
 						</div>
 					</div>
-			
+				
 
 					<div class="container-login100-form-btn">
 						<button class="login100-form-btn">
-							<a href="main"> Login </a>
+							<a href="#"> Login </a>
 						</button>
 					</div>
+				</form>
 					
 					<div href="main" class="text-center p-t-46 p-b-20">
 						<span class="txt2">

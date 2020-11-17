@@ -9,7 +9,7 @@
 					</ul>
 					<ul class="header-links pull-right">
 						
-						<li><a href="login"><i class="fa fa-user-o"></i> Login </a></li>
+						<li><a href="{{url('login-admin')}}"><i class="fa fa-user-o"></i> Login </a></li>
 					</ul>
 				</div>
 			</div>

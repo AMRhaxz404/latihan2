@@ -72,4 +72,16 @@ class HomeController extends Controller{
 	function showKategori(){
 		return view('kategori');
 	}
+
+
+	function test($produk, $hargaMin = 0, $hargaMax = 0){
+		if ($produk == 'payung') {
+			echo "Tampilkan Produk Payung";
+		}elseif ($produk == 'sepeda') {
+			echo "Tampilkan Produk Sepeda";
+		}
+		echo "<br>";
+		echo "Harga Min Adalah $hargaMin <br>"; 
+		echo "Harga Max Adalah $hargaMax <br>"; 
+	}
 }

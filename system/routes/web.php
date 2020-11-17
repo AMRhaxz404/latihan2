@@ -5,6 +5,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\ProdukController;
 use App\Http\Controllers\ClientProdukController;
+use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,7 +19,7 @@ use App\Http\Controllers\ClientProdukController;
 */  
 
 Route::get('/', function () {
-    return view('main');
+    return view('welcome ');
 }); 
 
 // wilayah client
@@ -37,14 +38,17 @@ Route::get('produk-client/{product}', [ClientProdukController::class, 'show']);
 Route::get('main', [ClientProdukController:: class, 'showMainIndex']);
 Route::get('detail-produk', [ClientProdukController::class, 'showDetail']);
 
-
+// tset
+Route::get('test/{produk}/{hargaMin?}/{hargaMax?}', [HomeController:: class, 'test']);
 
 
 // wilayah admin
 Route::get('admin', [HomeController::class, 'showAdmin']);
 
-Route::get('login-admin', [AuthController::class, 'showLoginadmin']);
-Route::get('registrasi', [HomeController::class, 'showRegistrasi']);
+// regsitrasi
+Route::get('login-admin', [AuthController::class, 'create']);
+Route::post('login-admin', [AuthController::class, 'registration']);
+
 Route::get('kategori', [HomeController::class, 'showKategori']);
 Route::get('promo', [HomeController::class, 'showPromo']);
 Route::get('pelanggan', [HomeController::class, 'showPelanggan']);
@@ -52,11 +56,17 @@ Route::get('supplier', [HomeController::class, 'showSupplier']);
 // Route::get('table', [HomeController::class, 'showTable']);
 // Route::get('tab-panel', [HomeController::class, 'showTabpanel']);
 
-Route::get('produk-admin', [ProdukController::class, 'index']);
-Route::get('produk/create', [ProdukController::class, 'create']);
-Route::post('produk-admin', [ProdukController::class, 'store']);
-Route::get('produk/{produk}', [ProdukController::class, 'show']);
-Route::get('produk/{produk}/edit', [ProdukController::class, 'edit']);
-Route::put('produk/{produk}', [ProdukController::class, 'update']);
-Route::delete('produk/{produk}', [ProdukController::class, 'destroy']);
+Route::prefix('admin')->middleware('auth')->group(function(){
+	// Produk
+	Route::resource('produk-admin', ProdukController::class);
+	// User
+	Route::resource('user', UserController::class);
+});
 
+
+
+
+// admin process login
+Route::get('login-admin', [AuthController::class, 'showLoginadmin'])->name('login');
+Route::post('login-admin', [AuthController::class, 'loginadminProcess']);
+Route::get('logout', [AuthController::class, 'logout']);

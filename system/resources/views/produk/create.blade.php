@@ -9,7 +9,7 @@
 				</div>
 
 				<div class="card-body">
-					<form action="{{url('produk-admin')}}" method="post">
+					<form action="{{url('admin/produk-admin')}}" method="post">
 						@csrf
 					<div class="form-group">
 						<label class="control-label">Nama</label>

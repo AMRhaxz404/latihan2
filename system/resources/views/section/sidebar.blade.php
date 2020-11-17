@@ -2,15 +2,23 @@
 		<div id="sideNav" href=""><i class="fa fa-caret-right"></i></div>
             <div class="sidebar-collapse">
                 <ul class="nav" id="main-menu">
-
+                    <div class="info">
+                        <a href="#">
+                            @if(Auth::check())
+                            <center><i class="fa fa-info"></i> {{request()->user()->nama}}</center>
+                            @else
+                            Silahkan Login
+                            @endif
+                        </a>
+                    </div>
                     <li>
                         <a class="active-menu" href="{{url('admin')}}"><i class="fa fa-dashboard"></i> Beranda</a>
                     </li>
                     <li>
-                        <a href="{{url('produk-admin')}}"><i class="fa fa-desktop"></i> Produk</a>
+                        <a href="{{url('admin/produk-admin')}}"><i class="fa fa-desktop"></i> Produk</a>
                     </li>
 					<li>
-                        <a href="{{url('promo')}}"><i class="fa fa-bar-chart-o"></i> Promo</a>
+                        <a href="{{url('admin/user')}}"><i class="fa fa-bar-chart-o"></i> User</a>
                     </li>
                     <li>
                         <a href="{{url('kategori')}}"><i class="fa fa-qrcode"></i> Kategori</a>
