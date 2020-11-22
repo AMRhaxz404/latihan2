@@ -37,6 +37,8 @@ Route::get('produk-client/{product}', [ClientProdukController::class, 'show']);
 
 Route::get('main', [ClientProdukController:: class, 'showMainIndex']);
 Route::get('detail-produk', [ClientProdukController::class, 'showDetail']);
+Route::get('category', [ClientProdukController::class, 'showCategory']);
+Route::post('category/filter', [ClientProdukController::class, 'filter']);
 
 // tset
 Route::get('test/{produk}/{hargaMin?}/{hargaMax?}', [HomeController:: class, 'test']);
@@ -57,6 +59,7 @@ Route::get('supplier', [HomeController::class, 'showSupplier']);
 // Route::get('tab-panel', [HomeController::class, 'showTabpanel']);
 
 Route::prefix('admin')->middleware('auth')->group(function(){
+	Route::post('produk-admin/filter', [ProdukController::class, 'filter']);
 	// Produk
 	Route::resource('produk-admin', ProdukController::class);
 	// User

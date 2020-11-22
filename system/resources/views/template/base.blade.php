@@ -69,7 +69,9 @@
     <!-- Custom Js -->
     <script src="{{url('system')}}/assets/js/custom-scripts.js"></script>
 
-
+    <script>
+        $(".table-datatable").DataTable();
+    </script>
 </body>
 
 </html>
