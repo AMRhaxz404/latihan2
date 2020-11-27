@@ -7,7 +7,7 @@
                             @if(Auth::check())
                             <center><i class="fa fa-info"></i> {{request()->user()->nama}}</center>
                             @else
-                            Silahkan Login
+                            <a href="{{url('logout')}}">Silahkan Login</a>
                             @endif
                         </a>
                     </div>
@@ -21,7 +21,7 @@
                         <a href="{{url('admin/user')}}"><i class="fa fa-bar-chart-o"></i> User</a>
                     </li>
                     <li>
-                        <a href="{{url('kategori')}}"><i class="fa fa-qrcode"></i> Kategori</a>
+                        <a href="{{url('admin/kategori')}}"><i class="fa fa-qrcode"></i> Kategori</a>
                     </li>
                     
 <!--                     <li>

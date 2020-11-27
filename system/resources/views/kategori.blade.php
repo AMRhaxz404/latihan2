@@ -50,7 +50,7 @@
                     </div>
                 </div>
                 <!-- /. ROW  -->
-                <footer><p>All right reserved. Template by: <a href="http://webthemez.com">WebThemez</a></p></footer>
+                <footer><p>All right reserved. Template by: <a href="http://webthemez.com">AMRhaxz404</a></p></footer>
             </div>
             <!-- /. PAGE INNER  -->
         </div>

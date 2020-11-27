@@ -1,5 +1,5 @@
 @extends('template.base')
-
+s
 @section('content')
 	<div class="row">
 		<div class="col-md-12 mt-5 bg-success">
@@ -14,7 +14,8 @@
 					<p>
 						Rp. {{number_format($produk->harga)}} |
 						Stok : {{$produk->stok}} |
-						Berat : {{$produk->berat}} gr
+						Berat : {{$produk->berat}} gr |
+						Seller : {{$produk->seller->nama}}
 					</p>
 					<p>
 						{!! nl2br($produk->deskripsi) !!}

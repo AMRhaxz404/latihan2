@@ -6,6 +6,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\ProdukController;
 use App\Http\Controllers\ClientProdukController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\KategoriController;
 
 /*
 |--------------------------------------------------------------------------
@@ -64,6 +65,8 @@ Route::prefix('admin')->middleware('auth')->group(function(){
 	Route::resource('produk-admin', ProdukController::class);
 	// User
 	Route::resource('user', UserController::class);
+	// kategori
+	Route::resource('kategori', KategoriController::class);
 });
 
 

@@ -1,24 +1,20 @@
 @extends('template.base')
-
+s
 @section('content')
 	<div class="row">
 		<div class="col-md-12 mt-5 bg-success">
 			<div class="card">
 				<div class="card-header">
-					Detail Data User<hr>
+					<h2>Detail Data Kategori</h2><hr>
 				</div>
 
 				<div class="card-body">
-					<h3>{{$user->nama}}</h3>
+					<h3>{{$kategori->nama}}</h3>
 					<hr>
 					<p>
-						{{"@".$user->username}} |
-						Email : {{$user->email}}
+						Nama : {{$kategori->nama}} |
+						Jumlah Barang : {{$kategori->jumlah_barang}}
 					</p>
-					<p>
-						No Handphone  : {{$user->detail->no_handphone}}
-					</p>
-					
 				</div>
 			</div> 
 		</div>

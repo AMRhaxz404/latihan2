@@ -26,36 +26,32 @@
 		<div class="col-md-12 mt-5 bg-primary">
 			<div class="card">
 				<div class="card-header">
-					Data User
+					<h1>DATA KATEGORI</h1>
 					<div id="button">
-				        <a class="button" href="{{url('admin/user/create')}}"><i class="fa fa-plus"></i>Tambah Data</a>
+				        <a class="button" href="{{url('admin/kategori/create')}}"><i class="fa fa-plus"></i>Tambah Data</a>
 				    </div>
     			</div>
 				<div class="card-body">
-					<table class="table">
+					<table class="table table-datatable">
 						<thead>
 							<th>No</th>
 							<th>Aksi</th>
-							<th>Username</th>
 							<th>Nama</th>
-							<th>Produk</th>
-							<th>Email</th>
+							<th>Jumlah Barang</th>
 						</thead>
 						<tbody>
-							@foreach($list_user as $user)
+							@foreach($list_produk as $produk)
 							<tr>
 								<td>{{$loop->iteration}}</td>
 								<td>
 									<div class=" btn btn-group">
-										<a href="{{url('admin/user', $user->id)}}" class="btn btn-success"><i class="fa fa-info"></i></a>
-										<a href="{{url('admin/user', $user->id)}}/edit" class="btn btn-warning"><i class="fa fa-edit"></i></a>
-										@include('template.utils.delete', ['url' => url('admin/user', $user->id)])
+										<a href="{{url('admin/kategori', $produk ?? ''->id)}}" class="btn btn-success"><i class="fa fa-info"></i></a>
+										<a href="{{url('admin/kategori', $produk ?? ''->id)}}/edit" class="btn btn-warning"><i class="fa fa-edit"></i></a>
+										@include('template.utils.delete', ['url' => url('admin/kategori', $produk ?? ''->id)])
 									</div>
 								</td>
-								<td>{{$user->username}}</td>
-								<td>{{$user->nama}}</td>
-								<td>{{$user->produk_count}}</td>
-								<td>{{$user->email}}</td>	
+								<td>{{$produk->nama}}</td>
+								<td>{{$produk->produk_count}}</td>
 							</tr>
 							@endforeach
 						</tbody>
