@@ -26,6 +26,10 @@
 							<label class="control-label">Password</label>
 							<input type="password" class="form-control" name='password'></input>
 						</div>
+						</div><div class="form-group">
+							<label class="control-label">Jenis Kelamin</label>
+							<input type="text" class="form-control" name='jenis_kelamin' placeholder="1 = Laki-Laki| 2 = Perempuan"></input>
+						</div>
 						<div class="form-group">
 							<label class="control-label">No HP</label>
 							<input type="no_handphone" class="form-control" name='no_handphone'></input>

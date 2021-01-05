@@ -22,4 +22,16 @@ class User extends Authenticatable
     function produk(){
     	return $this->hasMany(Produk::class, 'id_user');
     }
+
+    function getJenisKelaminStringAttribute(){
+    	return ($this->jenis_kelamin == 1) ? "Laki-Laki" : "Perempuan";
+    }
+
+    function setPasswordAtribute($value){
+    	$this->attributes['password'] = bcrpt($value);
+    }
+
+    function setUsernameAttribute($value){
+    	$this->attributes['username'] = strtolower($value);
+    }
 }
