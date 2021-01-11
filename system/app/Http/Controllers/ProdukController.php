@@ -13,14 +13,16 @@ class ProdukController extends Controller{
 		return  view ('produk.create');
 	}
 	function store(){
-		$produk = new Produk;
-		$produk->id_user = request()->user()->id;
-		$produk->nama = request('nama');
-		$produk->stok = request('stok');
-		$produk->harga = request('harga');
-		$produk->berat = request('berat');
-		$produk->deskripsi = request('deskripsi');
-		$produk->save();
+		$produkAdmin = new Produk;
+		$produkAdmin->id_user = request()->user()->id;
+		$produkAdmin->nama = request('nama');
+		$produkAdmin->stok = request('stok');
+		$produkAdmin->harga = request('harga');
+		$produkAdmin->berat = request('berat');
+		$produkAdmin->deskripsi = request('deskripsi');
+		$produkAdmin->save();
+
+		$produkAdmin->handleUploadFoto();
 
 		return redirect ('admin/produk-admin')->with('success', 'Data Berhasil Ditambahkan');
 
@@ -35,20 +37,24 @@ class ProdukController extends Controller{
 		$data['produk'] = $produkAdmin;
 		return view('produk.edit', $data);
 	}
-	function update(Produk $produk){
-		$produk->nama = request('nama');
-		$produk->stok = request('stok');
-		$produk->harga = request('harga');
-		$produk->berat = request('berat');
-		$produk->deskripsi = request('deskripsi');
-		$produk->save();
+	function update(Produk $produkAdmin){
+		$produkAdmin->nama = request('nama');
+		$produkAdmin->stok = request('stok');
+		$produkAdmin->harga = request('harga');
+		$produkAdmin->berat = request('berat');
+		$produkAdmin->deskripsi = request('deskripsi');
+		$produkAdmin->save();
 
-		return redirect ('produk-admin')->with('success', 'Data Berhasil Diedit');
+		$produkAdmin->handleUploadFoto();
+
+		return redirect ('admin/produk-admin')->with('success', 'Data Berhasil Diedit');
 	}
-	function destroy(Produk $produk){
-		$produk->delete();
+	function destroy(Produk $produkAdmin){
 
-		return redirect ('produk-admin')->with('danger', 'Data Berhasil Dihapus');
+		$produkAdmin->handleDelete();
+		$produkAdmin->delete();
+
+		return redirect ('admin/produk-admin')->with('danger', 'Data Berhasil Dihapus');
 	}
 	function filter(){
 		$nama = request('nama');

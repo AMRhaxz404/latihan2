@@ -1,6 +1,8 @@
 <?php 
 
 namespace App\Http\Controllers;
+use Config;
+use App;
 
 class HomeController extends Controller{
 
@@ -83,5 +85,14 @@ class HomeController extends Controller{
 		echo "<br>";
 		echo "Harga Min Adalah $hargaMin <br>"; 
 		echo "Harga Max Adalah $hargaMax <br>"; 
+	}
+
+	public function testCollection(){
+
+		$list_bike = ['Honda', 'Yamaha', 'Kawasaki', 'Suzuki', 'Vespa', 'BMW', 'KTM'];
+		$collection = collect($list_bike);
+
+		dd($collection->count());
+		dd($list_bike, $collection);
 	}
 }

@@ -1,4 +1,4 @@
-
+m
 <?php
 
 use Illuminate\Support\Facades\Route;
@@ -42,7 +42,7 @@ Route::get('detail-produk', [ClientProdukController::class, 'showDetail']);
 Route::get('category', [ClientProdukController::class, 'showCategory']);
 Route::post('category/filter', [ClientProdukController::class, 'filter']);
 
-// tset
+// test
 Route::get('test/{produk}/{hargaMin?}/{hargaMax?}', [HomeController:: class, 'test']);
 
 
@@ -77,3 +77,6 @@ Route::prefix('admin')->middleware('auth')->group(function(){
 Route::get('login-admin', [AuthController::class, 'showLoginadmin'])->name('login');
 Route::post('login-admin', [AuthController::class, 'loginadminProcess']);
 Route::get('logout', [AuthController::class, 'logout']);
+
+// test
+Route::get('test-collection', [HomeController:: class, 'testCollection']);

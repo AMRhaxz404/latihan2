@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
     <meta charset="utf-8" />
@@ -15,6 +15,12 @@
     <link href="{{url('system')}}/assets/css/custom-styles.css" rel="stylesheet" />
     <!-- Google Fonts-->
     <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
+    <!-- summernote -->
+    <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
+
+
+    @stack('style')
+
 </head>
 
 <body>
@@ -66,14 +72,21 @@
     
     <script src="{{url('system')}}/assets/js/easypiechart.js"></script>
     <script src="{{url('system')}}/assets/js/easypiechart-data.js"></script>
+    <!-- summernote -->
+    <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     
     
     <!-- Custom Js -->
     <script src="{{url('system')}}/assets/js/custom-scripts.js"></script>
 
+    @stack('script')
+
     <script>
         $(".table-datatable").DataTable();
     </script>
+    
 </body>
 
 </html>

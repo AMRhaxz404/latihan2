@@ -12,7 +12,7 @@
                         </a>
                     </div>
                     <li>
-                        <a class="active-menu" href="{{url('admin')}}"><i class="fa fa-dashboard"></i> Beranda</a>
+                        <a href="{{url('admin')}}"><i class="fa fa-dashboard"></i> Beranda</a>
                     </li>
                     <li>
                         <a href="{{url('admin/produk-admin')}}"><i class="fa fa-desktop"></i> Produk</a>
