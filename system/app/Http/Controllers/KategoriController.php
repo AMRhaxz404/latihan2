@@ -2,12 +2,15 @@
 
 namespace App\Http\Controllers;
 use App\Models\Kategori;
+use App\Models\Produk;
+use Config;
+use App;
 
 
 class KategoriController extends Controller{
 	function index(){
 		$user = request()->user();
-		$data['list_produk'] = $user->produk;
+		$data['list_produk'] = produk::simplePaginate(5);
 		return  view ('kategori.index', $data);
 	}
 	function create(){
