@@ -87,4 +87,5 @@ class ProdukController extends Controller{
 		$data['stok'] = request('stok');
 		return  view ('produk.index', $data);
 	}
+
 }
