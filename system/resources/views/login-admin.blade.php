@@ -45,6 +45,12 @@
                                     <label for="password" class="youpasswd" data-icon="p"> Your password </label>
                                     <input id="password" required="required" type="password" placeholder="Password" name="password" /> 
                                 </p>
+                                <p> 
+                                    <select name="login_as" class="form-control">
+                                        <option value="1">Pembeli</option>
+                                        <option value="2">Penjual</option>
+                                    </select>
+                                </p><br>
                                 <p class="keeplogin"> 
 									<input type="checkbox" name="loginkeeping" id="loginkeeping" value="loginkeeping" /> 
 									<label for="loginkeeping">Keep me logged in</label>

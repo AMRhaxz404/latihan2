@@ -218,3 +218,5 @@
                 <!-- /.dropdown -->
             </ul>
         </nav>
+
+        @stack('script')

@@ -18,7 +18,9 @@
     <!-- summernote -->
     <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
 
-
+    <!-- 
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
     @stack('style')
 
 </head>
@@ -60,26 +62,41 @@
     <!-- JS Scripts-->
     <!-- jQuery Js -->
     <script src="{{url('system')}}/assets/js/jquery-1.10.2.js"></script>
+    <script src="{{url('system')}}/assets/vendor/datatables/jquery.dataTables.min.js"></script>
     <!-- Bootstrap Js -->
     <script src="{{url('system')}}/assets/js/bootstrap.min.js"></script>
+
+    <script src="{{url('system')}}/assets/vendor/jquery/jquery/jquery.min.js"></script>
+
      
     <!-- Metis Menu Js -->
-    <script src="{{url('system')}}/assets/js/jquery.metisMenu.js"></script>
+    <!-- <script src="{{url('system')}}/assets/js/jquery.metisMenu.js"></script> -->
     <!-- Morris Chart Js -->
-    <script src="{{url('system')}}/assets/js/morris/raphael-2.1.0.min.js"></script>
-    <script src="{{url('system')}}/assets/js/morris/morris.js"></script>
+    <!-- <script src="{{url('system')}}/assets/js/morris/raphael-2.1.0.min.js"></script> -->
+    <!-- <script src="{{url('system')}}/assets/js/morris/morris.js"></script> -->
     
     
-    <script src="{{url('system')}}/assets/js/easypiechart.js"></script>
-    <script src="{{url('system')}}/assets/js/easypiechart-data.js"></script>
+    <!-- <script src="{{url('system')}}/assets/js/easypiechart.js"></script> -->
+    <!-- <script src="{{url('system')}}/assets/js/easypiechart-data.js"></script> -->
     <!-- summernote -->
     <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     
     
     <!-- Custom Js -->
-    <script src="{{url('system')}}/assets/js/custom-scripts.js"></script>
+    <!-- <script src="{{url('system')}}/assets/js/custom-scripts.js"></script> -->
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+
+
+
+
+    <!-- <script src="{{url('public')}}/assets_admin/js/bootstrap.js"></script> -->
+    <!-- <script src="{{url('public')}}/assets_admin/js/jquery.dcjqaccordion.2.7.js"></script> -->
+    <!-- <script src="{{url('public')}}/assets_admin/js/scripts.js"></script> -->
+    <!-- <script src="{{url('public')}}/assets_admin/js/jquery.slimscroll.js"></script> -->
+    <!-- <script src="{{url('public')}}/assets_admin/js/jquery.nicescroll.js"></script> -->
+    <!--[if lte IE 8]><script language="javascript" type="text/javascript" src="js/flot-chart/excanvas.min.js"></script><![endif]-->
+    <!-- <script src="{{url('public')}}/assets_admin/js/jquery.scrollTo.js"></script> -->
 
     @stack('script')
 

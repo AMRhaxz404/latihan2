@@ -48,6 +48,7 @@ Route::get('test/{produk}/{hargaMin?}/{hargaMax?}', [HomeController:: class, 'te
 
 // wilayah admin
 Route::get('admin', [HomeController::class, 'showAdmin']);
+Route::get('admin/{status}', [HomeController::class, 'showAdmin']);
 
 // regsitrasi
 Route::get('login-admin', [AuthController::class, 'create']);
@@ -80,3 +81,6 @@ Route::get('logout', [AuthController::class, 'logout']);
 
 // test
 Route::get('test-collection', [HomeController:: class, 'testCollection']);
+
+// wilayah - ajax
+Route::get('test-ajax', [HomeController:: class, 'testAjax']);;
