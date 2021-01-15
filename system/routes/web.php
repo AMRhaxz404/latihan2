@@ -8,6 +8,7 @@ use App\Http\Controllers\ProdukController;
 use App\Http\Controllers\ClientProdukController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\KategoriController;
+use App\Http\Controllers\SettingController;
 
 /*
 |--------------------------------------------------------------------------
@@ -61,10 +62,11 @@ Route::get('supplier', [HomeController::class, 'showSupplier']);
 // Route::get('table', [HomeController::class, 'showTable']);
 // Route::get('tab-panel', [HomeController::class, 'showTabpanel']);
 
-Route::prefix('admin')->middleware('auth')->group(function(){
+Route::prefix('admin')->middleware('auth:pembeli')->group(function(){
 	Route::post('produk-admin/filter', [ProdukController::class, 'filter']);
 	// Produk
 	Route::resource('produk-admin', ProdukController::class);
+	Route::resource('product-admin', ProductController::class);
 	// User
 	Route::resource('user', UserController::class);
 	// kategori
@@ -83,4 +85,10 @@ Route::get('logout', [AuthController::class, 'logout']);
 Route::get('test-collection', [HomeController:: class, 'testCollection']);
 
 // wilayah - ajax
-Route::get('test-ajax', [HomeController:: class, 'testAjax']);;
+Route::get('test-ajax', [HomeController:: class, 'testAjax']);
+
+
+// setting
+Route::get('setting', [SettingController:: class, 'index']);
+Route::post('setting', [SettingController:: class, 'store']);
+Route::post('produk-admin', [ProdukController:: class, 'index']);

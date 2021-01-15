@@ -50,9 +50,6 @@
                             </li>
                             <li>
                                 <a href="{{url('supplier')}}">Supplier</a>
-                            </li> <br><br><br><br><br>
-                            <li>
-                                <a href="{{url('logout')}}"> <i class="fa fa-sign-out"></i> Logout</a>
                             </li>
                             <li>
 <!--                                 <a href="#">Second Level Link<span class="fa arrow"></span></a>

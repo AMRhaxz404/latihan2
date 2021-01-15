@@ -5,6 +5,7 @@ namespace App\Models;
 use App\Models\Traits\Attributes\ProdukAttributes;
 use App\Models\Traits\Relations\ProdukRelations;
 
+
 class Produk extends Model{
 
 	use ProdukAttributes, ProdukRelations;
@@ -17,7 +18,5 @@ class Produk extends Model{
 		'berat' => 'decimal:2'
 	];
 
-	protected $dates = ['creted_at'];
-
-	
+	// protected $dates = ['creted_at'];
 }

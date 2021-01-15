@@ -173,5 +173,13 @@
 		<script src="{{url('system')}}/js/jquery.zoom.min.js"></script>
 		<script src="{{url('system')}}/js/main.js"></script>
 
+		@stack('script')
+
+    <script>
+        $(".table-datatable").DataTable();
+    </script>
+    
 	</body>
 </html>
+
+

@@ -1,19 +1,19 @@
 <?php 
 
 namespace App\Http\Controllers;
-use App\Models\Produk;
+use App\Models\Product;
 
-class ProdukController extends Controller{
+class ProductController extends Controller{
 	function index(){
 		$user = request()->user();
-		$data['list_produk'] = $userr->produk;
+		$data['list_produk'] = Product::all();
 		return  view ('produk.index', $data);
 	}
 	function create(){
 		return  view ('produk.create');
 	}
 	function store(){
-		$produkAdmin = new Product;
+		$produkAdmin = new Produk;
 		$produkAdmin->id_user = request()->user()->id;
 		$produkAdmin->nama = request('nama');
 		$produkAdmin->stok = request('stok');
