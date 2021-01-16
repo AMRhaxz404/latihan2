@@ -28,7 +28,7 @@ class Penjual extends Authenticatable
     }
 
     function setPasswordAtribute($value){
-    	$this->attributes['password'] = bcrpt($value);
+    	$this->attributes['password'] = bcrypt($value);
     }
 
     function setUsernameAttribute($value){

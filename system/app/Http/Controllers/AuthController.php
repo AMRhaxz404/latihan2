@@ -14,35 +14,49 @@ class AuthController extends Controller
 	}
 
 	function loginadminProcess(){
-		// if(Auth::attempt(['email' => request('email'), 'password' => request('password')])){
-		// 	$user = Auth::user();
-		// 	if($user->level == 1) return redirect('admin/admin')->with('success', 'Login Berhasil');
-		// 	if($user->level == 0) return redirect('admin/pengguna')->with('success', 'Login Berhasil');
-		// }else{
-		// 	return back()->with('danger', 'Login Gagal, Silahkan Cek Email dan Password Anda');
-		// }
+		// untuk login biasa tanpa multi user
+        // if (Auth::attempt(['email' => request('email'), 'password' => request('password')])) {
+        //     return redirect('admin')->with('success', 'Login Berhasil');
+        // } else {
+        //     // return redirect('template.admin')->with('success', 'Login Berhasil');
+        //     return back()->with('danger', 'Login gagal. Silahkan cek email dan password anda!');
+        // }
 
-		$email = request('email');
-        $user = Pembeli::where('email', $email)->first();
-        if ($user) {
-            $guard = 'pembeli';
-        } else {
-            $user = Penjual::where('email', $email)->first();
-            if ($user) {
-                $guard = 'penjual';
-            } else {
-                $guard = false;
-            }
-        }
-        if (!$guard) {
-            return back()->with('danger', 'login gagal, email tidak dapat ditemukan');
-        } else {
-            if (Auth::guard($guard)->attempt(['email' => request('email'), 'password' => request('password')])) {
-                return redirect('admin/$guard')->with('success', 'Anda berhasil login');
-            } else {
-                return back()->with('danger', 'login gagal silahkan cek email dan password');
-            }
-        }
+
+
+
+
+		if(Auth::attempt(['email' => request('email'), 'password' => request('password')])){
+			$user = Auth::user();
+			if($user->level == 1) return redirect('admin/admin')->with('success', 'Login Berhasil');
+			if($user->level == 0) return redirect('admin/pengguna')->with('success', 'Login Berhasil');
+		}else{
+			return back()->with('danger', 'Login Gagal, Silahkan Cek Email dan Password Anda');
+		}
+
+
+
+		// $email = request('email');
+  //       $user = Pembeli::where('email', $email)->first();
+  //       if ($user) {
+  //           $guard = 'pembeli';
+  //       } else {
+  //           $user = Penjual::where('email', $email)->first();
+  //           if ($user) {
+  //               $guard = 'penjual';
+  //           } else {
+  //               $guard = false;
+  //           }
+  //       }
+  //       if (!$guard) {
+  //           return back()->with('danger', 'login gagal, email tidak dapat ditemukan');
+  //       } else {
+  //           if (Auth::guard($guard)->attempt(['email' => request('email'), 'password' => request('password')])) {
+  //               return redirect('admin/$guard')->with('success', 'Anda berhasil login');
+  //           } else {
+  //               return back()->with('danger', 'login gagal silahkan cek email dan password');
+  //           }
+  //       }
 
 		// Multi Authentication
 		// if (request('login_as') == 1) {

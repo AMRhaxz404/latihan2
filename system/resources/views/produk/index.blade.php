@@ -3,7 +3,6 @@
 @extends('template.base')
 
 @section('content')
-
 	<!-- CSS Button -->
 	<style type="text/css">
 		.button {

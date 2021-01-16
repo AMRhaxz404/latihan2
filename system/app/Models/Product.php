@@ -3,8 +3,9 @@
 namespace App\Models;
 
 use App\Models\Traits\Attributes\ProdukAttributes;
-use App\Models\Traits\Relations\ProdukRelations;
+use App\Models\Traits\Relations\ProductRelations;
 use Illuminate\Support\Str;
+
 
 class Product extends Model{
 
@@ -12,12 +13,15 @@ class Product extends Model{
 
 	protected $table = 'product';
 	protected $primaryKey = 'uuid';
-	public $incrementing = false;
+	public $incrementing = 'false';
 	protected $casts = [
 		'created_at' => 'datetime',
 		'updated_at' => 'datetime',
 		'berat' => 'decimal:2'
 	];
+
+	// protected $dates = ['creted_at'];
+
 
 	function static function boot(){
 		parent::boot();

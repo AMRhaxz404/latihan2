@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use App\Models\Product;
+use Faker;
 
 class ProductController extends Controller{
 	function index(){
@@ -13,7 +14,7 @@ class ProductController extends Controller{
 		return  view ('produk.create');
 	}
 	function store(){
-		$produkAdmin = new Produk;
+		$produkAdmin = new Product;
 		$produkAdmin->id_user = request()->user()->id;
 		$produkAdmin->nama = request('nama');
 		$produkAdmin->stok = request('stok');
@@ -28,16 +29,16 @@ class ProductController extends Controller{
 
 	}
 
-	function show(Product $produkAdmin){
+	function show(Product $productAdmin){
 
 		$data['produk'] = $produkAdmin;
 		return view('produk.show', $data);
 	}
-	function edit(Product $produkAdmin){
+	function edit(Product $productAdmin){
 		$data['produk'] = $produkAdmin;
 		return view('produk.edit', $data);
 	}
-	function update(Product $produkAdmin){
+	function update(Product $productAdmin){
 		$produkAdmin->nama = request('nama');
 		$produkAdmin->stok = request('stok');
 		$produkAdmin->harga = request('harga');
@@ -49,7 +50,7 @@ class ProductController extends Controller{
 
 		return redirect ('admin/produk-admin')->with('success', 'Data Berhasil Diedit');
 	}
-	function destroy(Product $produkAdmin){
+	function destroy(Product $productAdmin){
 
 		$produkAdmin->handleDelete();
 		$produkAdmin->delete();

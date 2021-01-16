@@ -1,5 +1,4 @@
 <nav class="navbar-default navbar-side" role="navigation">
-		<div id="sideNav" href=""><i class="fa fa-caret-right"></i></div>
             <div class="sidebar-collapse">
                 <ul class="nav nav-second-level" id="main-menu">
                     <li>
@@ -43,13 +42,12 @@
 
 
                     <li>
-                        <a href="#"><i class="fa fa-sitemap"></i> Master Data<span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
                             <li>
-                                <a href="{{url('pelanggan')}}">Pelanggan</a>
+                                <a href="{{url('pelanggan')}}"><i class="fa fa-user"></i>Pelanggan</a>
                             </li>
                             <li>
-                                <a href="{{url('supplier')}}">Supplier</a>
+                                <a href="{{url('supplier')}}"><i class="fa fa-shopping-cart"></i>Supplier</a>
                             </li>
                             <li>
 <!--                                 <a href="#">Second Level Link<span class="fa arrow"></span></a>
@@ -76,5 +74,5 @@
 
             </div>
 
-        </nav>  
+        </nav>
         @stack('script')
