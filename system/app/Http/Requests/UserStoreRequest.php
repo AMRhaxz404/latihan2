@@ -35,10 +35,7 @@ class UserStoreRequest extends FormRequest
             'nama.required' => 'Nama Wajib Di Isi !',
             'username.required' => 'Username Wajib Di Isi !',
             'username.unique' => 'Username Sudah Terdaftar !',
-            'email.required' => 'Email Wajib Di Isi !',
-            'password.required' => 'Password Wajib Di Isi !',
-            'jenis_kelamin.required' => 'Jenis Kelamin Wajib Di Pilih !',
-            'hp.required' => 'No Hp Wajib Di Isi !'
+            'email.required' => 'Email Wajib Di Isi !'
         ];
     }
 }

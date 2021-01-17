@@ -13,9 +13,9 @@
         <meta name="keywords" content="html5, css3, form, switch, animation, :target, pseudo-class" />
         <meta name="author" content="Codrops" />
         <link rel="shortcut icon" href="../favicon.ico"> 
-        <link rel="stylesheet" type="text/css" href="{{url('system')}}/assets/css/demo.css" />
-        <link rel="stylesheet" type="text/css" href="{{url('system')}}/assets/css/style.css" />
-		<link rel="stylesheet" type="text/css" href="{{url('system')}}/assets/css/animate-custom.css" />
+        <link rel="stylesheet" type="text/css" href="{{url('public')}}/assets/css/demo.css" />
+        <link rel="stylesheet" type="text/css" href="{{url('public')}}/assets/css/style.css" />
+		<link rel="stylesheet" type="text/css" href="{{url('public')}}/assets/css/animate-custom.css" />
     </head>
     <body>
         <div class="container">
