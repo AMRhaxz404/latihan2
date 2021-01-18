@@ -7,13 +7,13 @@ class ProdukController extends Controller{
 	function index(){
 		$user = request()->user();
 		$data['list_produk'] = $userr->produk;
-		return  view ('produk.index', $data);
+		return  view ('admin', $data);
 	}
 	function create(){
 		return  view ('produk.create');
 	}
 	function store(){
-		$produkAdmin = new Product;
+		$produkAdmin = new Produk;
 		$produkAdmin->id_user = request()->user()->id;
 		$produkAdmin->nama = request('nama');
 		$produkAdmin->stok = request('stok');
@@ -28,16 +28,16 @@ class ProdukController extends Controller{
 
 	}
 
-	function show(Product $produkAdmin){
+	function show(Produk $produkAdmin){
 
 		$data['produk'] = $produkAdmin;
 		return view('produk.show', $data);
 	}
-	function edit(Product $produkAdmin){
+	function edit(Produk $produkAdmin){
 		$data['produk'] = $produkAdmin;
 		return view('produk.edit', $data);
 	}
-	function update(Product $produkAdmin){
+	function update(Produk $produkAdmin){
 		$produkAdmin->nama = request('nama');
 		$produkAdmin->stok = request('stok');
 		$produkAdmin->harga = request('harga');
@@ -49,7 +49,7 @@ class ProdukController extends Controller{
 
 		return redirect ('admin/produk-admin')->with('success', 'Data Berhasil Diedit');
 	}
-	function destroy(Product $produkAdmin){
+	function destroy(Produk $produkAdmin){
 
 		$produkAdmin->handleDelete();
 		$produkAdmin->delete();
@@ -62,7 +62,7 @@ class ProdukController extends Controller{
 		$data['harga_min'] = $harga_min = request('harga_min');
 		$data['harga_max'] = $harga_max = request('harga_max');
 		// Positif
-		$data['list_produk'] = Product::where('nama', 'like', "%$nama%")->get();
+		$data['list_produk'] = Produk::where('nama', 'like', "%$nama%")->get();
 		// $data['list_produk'] = Produk::whereIn('stok', $stok)->get();
 		// $data['list_produk'] = Produk::whereBetween('harga', [$harga_min, $harga_max])->get();
 

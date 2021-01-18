@@ -6,13 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Admin</title>
     <!-- Bootstrap Styles-->
-    <link href="{{url('system')}}/assets/css/bootstrap.css" rel="stylesheet" />
+    <link href="{{url('public')}}/assets/css/bootstrap.css" rel="stylesheet" />
     <!-- FontAwesome Styles-->
-    <link href="{{url('system')}}/assets/css/font-awesome.css" rel="stylesheet" />
+    <link href="{{url('public')}}/assets/css/font-awesome.css" rel="stylesheet" />
     <!-- Morris Chart Styles-->
-    <link href="{{url('system')}}/assets/js/morris/morris-0.4.3.min.css" rel="stylesheet" />
+    <link href="{{url('public')}}/assets/js/morris/morris-0.4.3.min.css" rel="stylesheet" />
     <!-- Custom Styles-->
-    <link href="{{url('system')}}/assets/css/custom-styles.css" rel="stylesheet" />
+    <link href="{{url('public')}}/assets/css/custom-styles.css" rel="stylesheet" />
     <!-- Google Fonts-->
     <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
 </head>

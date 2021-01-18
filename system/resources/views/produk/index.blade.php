@@ -1,6 +1,6 @@
 @inject('timeServices', 'App\Services\TimeServices')
 
-@extends('template.base')
+@extends('template.baseclient')
 
 @section('content')
 	<!-- CSS Button -->

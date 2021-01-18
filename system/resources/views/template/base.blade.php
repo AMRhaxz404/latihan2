@@ -1,109 +1,135 @@
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Admin</title>
-    <!-- Bootstrap Styles-->
-    <link href="{{url('public')}}/assets/css/bootstrap.css" rel="stylesheet" />
-    <!-- FontAwesome Styles-->
-    <link href="{{url('public')}}/assets/css/font-awesome.css" rel="stylesheet" />
-    <!-- Morris Chart Styles-->
-    <link href="{{url('public')}}/assets/js/morris/morris-0.4.3.min.css" rel="stylesheet" />
-    <!-- Custom Styles-->
-    <link href="{{url('public')}}/assets/css/custom-styles.css" rel="stylesheet" />
-    <!-- Google Fonts-->
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
-    <!-- summernote -->
-    <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
+    </head>
+    <body>
+        <!-- HEADER -->
+        @include('sectionclient.header')
+        <!-- /HEADER -->
 
-    <!-- 
-    
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
-    @stack('style')
+        <!-- NAVIGATION -->
+        @include('sectionclient.sidebar')
+        <!-- /NAVIGATION -->
 
-</head>
-
-<body>
-    <div id="wrapper">
+        <!-- konten -->
+        @yield('content')
         
+        <!-- end konten -->
+        <!-- FOOTER -->
+        <footer id="footer">
+            <!-- top footer -->
+            <div class="section">
+                <!-- container -->
+                <div class="container">
+                    <!-- row -->
+                    <div class="row">
+                        <div class="col-md-3 col-xs-6">
+                            <div class="footer">
+                                <h3 class="footer-title">About Us</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut.</p>
+                                <ul class="footer-links">
+                                    <li><a href="#"><i class="fa fa-map-marker"></i>1734 Stonecoal Road</a></li>
+                                    <li><a href="#"><i class="fa fa-phone"></i>+021-95-51-84</a></li>
+                                    <li><a href="#"><i class="fa fa-envelope-o"></i>email@email.com</a></li>
+                                </ul>
+                            </div>
+                        </div>
 
-        @include('section.header')
+                        <div class="col-md-3 col-xs-6">
+                            <div class="footer">
+                                <h3 class="footer-title">Categories</h3>
+                                <ul class="footer-links">
+                                    <li><a href="#">Hot deals</a></li>
+                                    <li><a href="#">Laptops</a></li>
+                                    <li><a href="#">Smartphones</a></li>
+                                    <li><a href="#">Cameras</a></li>
+                                    <li><a href="#">Accessories</a></li>
+                                </ul>
+                            </div>
+                        </div>
 
-        <!--/. NAV TOP  -->
-        
-        @include('section.sidebar')
+                        <div class="clearfix visible-xs"></div>
 
+                        <div class="col-md-3 col-xs-6">
+                            <div class="footer">
+                                <h3 class="footer-title">Information</h3>
+                                <ul class="footer-links">
+                                    <li><a href="#">About Us</a></li>
+                                    <li><a href="#">Contact Us</a></li>
+                                    <li><a href="#">Privacy Policy</a></li>
+                                    <li><a href="#">Orders and Returns</a></li>
+                                    <li><a href="#">Terms & Conditions</a></li>
+                                </ul>
+                            </div>
+                        </div>
 
-        <!-- /. NAV SIDE  -->
-        <div id="page-wrapper">
-               <div class="row">
-                   <div class="col-md-12">
-                       @include('template.utils.notif')
-                   </div>
-               </div>
-                <!-- Konten disini -->
-                @yield('content')
-
-               <!-- Akhir conten -->
-                 
+                        <div class="col-md-3 col-xs-6">
+                            <div class="footer">
+                                <h3 class="footer-title">Service</h3>
+                                <ul class="footer-links">
+                                    <li><a href="#">My Account</a></li>
+                                    <li><a href="#">View Cart</a></li>
+                                    <li><a href="#">Wishlist</a></li>
+                                    <li><a href="#">Track My Order</a></li>
+                                    <li><a href="#">Help</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /row -->
                 </div>
-                <!-- /. ROW  -->
-                <footer>
-                    
-                </footer>
+                <!-- /container -->
             </div>
-            <!-- /. PAGE INNER  -->
-        </div>
-        <!-- /. PAGE WRAPPER  -->
-    </div>
-    <!-- /. WRAPPER  -->
-    <!-- JS Scripts-->
-    <!-- jQuery Js -->
-    <script src="{{url('public')}}/assets/js/jquery-1.10.2.js"></script>
-    <script src="{{url('public')}}/assets/vendor/datatables/jquery.dataTables.min.js"></script>
-    <!-- Bootstrap Js -->
-    <script src="{{url('public')}}/assets/js/bootstrap.min.js"></script>
+            <!-- /top footer -->
 
-    <script src="{{url('public')}}/assets/vendor/jquery/jquery/jquery.min.js"></script>
+            <!-- bottom footer -->
+            <div id="bottom-footer" class="section">
+                <div class="container">
+                    <!-- row -->
+                    <div class="row">
+                        <div class="col-md-12 text-center">
+                            <ul class="footer-payments">
+                                <li><a href="#"><i class="fa fa-cc-visa"></i></a></li>
+                                <li><a href="#"><i class="fa fa-credit-card"></i></a></li>
+                                <li><a href="#"><i class="fa fa-cc-paypal"></i></a></li>
+                                <li><a href="#"><i class="fa fa-cc-mastercard"></i></a></li>
+                                <li><a href="#"><i class="fa fa-cc-discover"></i></a></li>
+                                <li><a href="#"><i class="fa fa-cc-amex"></i></a></li>
+                            </ul>
+                            <span class="copyright">
+                                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                                Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | Olshop Kampus by <a href="http://campuran-gaje.blogspot.com/" target="_blank">Muhammad Amrin Mukhodas</a>
+                            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                            </span>
+                        </div>
+                    </div>
+                        <!-- /row -->
+                </div>
+                <!-- /container -->
+            </div>
+            <!-- /bottom footer -->
+        </footer>
+        <!-- /FOOTER -->
 
-     
-    <!-- Metis Menu Js -->
-    <!-- <script src="{{url('system')}}/assets/js/jquery.metisMenu.js"></script> -->
-    <!-- Morris Chart Js -->
-    <!-- <script src="{{url('system')}}/assets/js/morris/raphael-2.1.0.min.js"></script> -->
-    <!-- <script src="{{url('system')}}/assets/js/morris/morris.js"></script> -->
-    
-    
-    <!-- <script src="{{url('system')}}/assets/js/easypiechart.js"></script> -->
-    <!-- <script src="{{url('system')}}/assets/js/easypiechart-data.js"></script> -->
-    <!-- summernote -->
-    <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    
-    
-    <!-- Custom Js -->
-    <!-- <script src="{{url('system')}}/assets/js/custom-scripts.js"></script> -->
-    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
-
-
-
-
-    <!-- <script src="{{url('public')}}/assets_admin/js/bootstrap.js"></script> -->
-    <!-- <script src="{{url('public')}}/assets_admin/js/jquery.dcjqaccordion.2.7.js"></script> -->
-    <!-- <script src="{{url('public')}}/assets_admin/js/scripts.js"></script> -->
-    <!-- <script src="{{url('public')}}/assets_admin/js/jquery.slimscroll.js"></script> -->
-    <!-- <script src="{{url('public')}}/assets_admin/js/jquery.nicescroll.js"></script> -->
-    <!--[if lte IE 8]><script language="javascript" type="text/javascript" src="js/flot-chart/excanvas.min.js"></script><![endif]-->
-    <!-- <script src="{{url('public')}}/assets_admin/js/jquery.scrollTo.js"></script> -->
-
-    @stack('script')
+        <!-- jQuery Plugins -->
+        <script src="{{url('public')}}/js/jquery.min.js"></script>
+        <script src="{{url('public')}}/js/bootstrap.min.js"></script>
+        <script src="{{url('public')}}/js/slick.min.js"></script>
+        <script src="{{url('public')}}/js/nouislider.min.js"></script>
+        <script src="{{url('public')}}/js/jquery.zoom.min.js"></script>
+        <script src="{{url('public')}}/js/js/main.js"></script>
+public
+        @stack('script')
 
     <script>
         $(".table-datatable").DataTable();
     </script>
     
-</body>
-
+    </body>
 </html>
+
+

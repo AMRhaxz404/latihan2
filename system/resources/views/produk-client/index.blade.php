@@ -1,56 +1,8 @@
 @extends('template.baseclient')
 
-@section('content')
-		<header>
-			<!-- TOP HEADER -->
-			<div id="top-header">
-				<div class="container">
-					<ul class="header-links pull-left">
-						<li><a href="#"><i class="fa fa-phone"></i> +62-89524526934</a></li>
-						<li><a href="#"><i class="fa fa-envelope-o"></i> olshopkampus@gmail.com</a></li>
-						<li><a href="#"><i class="fa fa-map-marker"></i> ketapang, kalimantan Barat, Indonesia</a></li>
-					</ul>
-					<ul class="header-links pull-right">
-						
-						<li><a href="login"><i class="fa fa-user-o"></i> Login </a></li>
-					</ul>
-				</div>
-			</div>
-			<!-- /TOP HEADER -->
+@section('content')	
 
-			<!-- MAIN HEADER -->
-			<div id="header">
-				<!-- container -->
-				<div class="container">
-					<!-- row -->
-					<div class="row">
-
-						<!-- LOGO -->
-						<div class="col-md-3">
-							<div class="header-logo">
-								<a href="#" class="logo">
-									<img src="{{url('system')}}/img/olshopkampus.jpg" width="100px" height="100px">
-								</a>
-							</div>
-						</div>
-						<!-- /LOGO -->
-
-						<!-- SEARCH BAR -->
-						<div class="col-md-6">
-							<diw class="row">
-							<div class="header-search">
-								<form class="col-md-12 row form-group">
-									<select class="input-select">
-										<option value="0">All Categories</option>
-										<option value="1">Category 01</option>
-										<option value="1">Category 02</option>
-									</select>
-									<input class="input" placeholder="Search here">
-									<button class="search-btn">Search</button>
-								</form>
-							</div>
-							</diw>
-						</div>
+		
 						<!-- /SEARCH BAR -->
 
 						<!-- ACCOUNT -->
@@ -77,7 +29,7 @@
 										<div class="cart-list">
 											<div class="product-widget">
 												<div class="product-img">
-													<img src="{{url('system')}}/img/product01.png" alt="">
+													<img src="{{url('public')}}/img/product01.png" alt="">
 												</div>
 												<div class="product-body">
 													<h3 class="product-name"><a href="#">product name goes here</a></h3>
@@ -88,7 +40,7 @@
 
 											<div class="product-widget">
 												<div class="product-img">
-													<img src="{{url('system')}}/img/product02.png" alt="">
+													<img src="{{url('public')}}/img/product02.png" alt="">
 												</div>
 												<div class="product-body">
 													<h3 class="product-name"><a href="#">product name goes here</a></h3>
@@ -185,19 +137,19 @@
 					<div class="col-md-5 col-md-push-2">
 						<div id="product-main-img">
 							<div class="product-preview">
-								<img src="{{url('system')}}/img/product01.png" alt="">
+								<img src="{{url('public')}}/img/product01.png" alt="">
 							</div>
 
 							<div class="product-preview">
-								<img src="{{url('system')}}/img/product03.png" alt="">
+								<img src="{{url('public')}}/img/product03.png" alt="">
 							</div>
 
 							<div class="product-preview">
-								<img src="{{url('system')}}/img/product06.png" alt="">
+								<img src="{{url('public')}}/img/product06.png" alt="">
 							</div>
 
 							<div class="product-preview">
-								<img src="{{url('system')}}/img/product08.png" alt="">
+								<img src="{{url('public')}}/img/product08.png" alt="">
 							</div>
 						</div>
 					</div>
@@ -207,19 +159,19 @@
 					<div class="col-md-2  col-md-pull-5">
 						<div id="product-imgs">
 							<div class="product-preview">
-								<img src="{{url('system')}}/img/product01.png" alt="">
+								<img src="{{url('public')}}/img/product01.png" alt="">
 							</div>
 
 							<div class="product-preview">
-								<img src="{{url('system')}}/img/product03.png" alt="">
+								<img src="{{url('public')}}/img/product03.png" alt="">
 							</div>
 
 							<div class="product-preview">
-								<img src="{{url('system')}}/img/product06.png" alt="">
+								<img src="{{url('public')}}/img/product06.png" alt="">
 							</div>
 
 							<div class="product-preview">
-								<img src="{{url('system')}}/img/product08.png" alt="">
+								<img src="{{url('public')}}/img/product08.png" alt="">
 							</div>
 						</div>
 					</div>
@@ -533,7 +485,7 @@
 					<div class="col-md-3 col-xs-6">
 						<div class="product">
 							<div class="product-img">
-								<img src="{{url('system')}}/img/product01.png" alt="">
+								<img src="{{url('public')}}/img/product01.png" alt="">
 								<div class="product-label">
 									<span class="sale">-30%</span>
 								</div>
@@ -596,7 +548,7 @@
 					<div class="col-md-3 col-xs-6">
 						<div class="product">
 							<div class="product-img">
-								<img src="{{url('system')}}/img/product03.png" alt="">
+								<img src="{{url('public')}}/img/product03.png" alt="">
 							</div>
 							<div class="product-body">
 								<p class="product-category">Category</p>

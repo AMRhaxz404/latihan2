@@ -9,7 +9,7 @@
 				<div class="form-check disabled">
 				  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3" disabled>
 				  <label class="form-check-label" for="exampleRadios3">
-				    Silahkan Pilih Ekspedisi
+				    Ekspedisi Yang Tersedia
 				  </label>
 				</div>
 				<div class="form-check">
@@ -54,7 +54,7 @@
 		<div class="row">
 			<div class="col-md-12">
 				<div class="card-header">
-					Alamat :
+					Destinasi :
 				</div>
 				<div class="card-body">
 					<div class="row">
@@ -92,8 +92,8 @@
 
 <div class="col-md-12 bg-danger mb-5">
 		<div class="card ">
-			<div class="card-header">
-				<button> Pesan Sekarang </button>
+			<div class="card-header ">
+				<button> <a href="main"> ESTIMASI BIAYA PENGIRIMAN (KEMBALI)</button></a>
 			</div>
 		</div>
 </div>

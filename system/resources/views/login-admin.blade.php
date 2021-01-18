@@ -1,108 +1,131 @@
 <!DOCTYPE html>
-<!--[if lt IE 7 ]> <html lang="en" class="no-js ie6 lt8"> <![endif]-->
-<!--[if IE 7 ]>    <html lang="en" class="no-js ie7 lt8"> <![endif]-->
-<!--[if IE 8 ]>    <html lang="en" class="no-js ie8 lt8"> <![endif]-->
-<!--[if IE 9 ]>    <html lang="en" class="no-js ie9"> <![endif]-->
-<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
-    <head>
-        <meta charset="UTF-8" />
-        <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">  -->
-        <title>Login Admin</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-        <meta name="description" content="Login and Registration Form with HTML5 and CSS3" />
-        <meta name="keywords" content="html5, css3, form, switch, animation, :target, pseudo-class" />
-        <meta name="author" content="Codrops" />
-        <link rel="shortcut icon" href="../favicon.ico"> 
-        <link rel="stylesheet" type="text/css" href="{{url('public')}}/assets/css/demo.css" />
-        <link rel="stylesheet" type="text/css" href="{{url('public')}}/assets/css/style.css" />
-		<link rel="stylesheet" type="text/css" href="{{url('public')}}/assets/css/animate-custom.css" />
-    </head>
-    <body>
-        <div class="container">
-            
-            <header>
-                <h1>Login and Registration Form <span>For Admin</span></h1>
-				<nav class="codrops-demos">
+<html lang="en">
+<head>
+    <title>Login Olshop Kampus</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->  
+    <link rel="icon" type="image/png" href="{{url('public')}}/login/images/icons/favicon.ico"/>
+<!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="{{url('public')}}/login/vendor/bootstrap/css/bootstrap.min.css">
+<!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="{{url('public')}}/login/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="{{url('public')}}/login/fonts/iconic/css/material-design-iconic-font.min.css">
+<!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="{{url('public')}}/login/vendor/animate/animate.css">
+<!--===============================================================================================-->  
+    <link rel="stylesheet" type="text/css" href="{{url('public')}}/login/vendor/css-hamburgers/hamburgers.min.css">
+<!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="{{url('public')}}/login/vendor/animsition/css/animsition.min.css">
+<!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="{{url('public')}}/login/vendor/select2/select2.min.css">
+<!--===============================================================================================-->  
+    <link rel="stylesheet" type="text/css" href="{{url('public')}}/login/vendor/daterangepicker/daterangepicker.css">
+<!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="{{url('public')}}/login/css/util.css">
+    <link rel="stylesheet" type="text/css" href="{{url('public')}}/login/css/main.css">
+<!--===============================================================================================-->
+</head>
+<body>
+    
+    <div class="limiter">
+        <div class="container-login100" style="background-image: url('{{url('public')}}/login/images/bg-01.jpg');">
+            <div class="wrap-login100 p-l-55 p-r-55 p-t-65 p-b-54">
+                @include('template.utils.notif')
+                <form  action="{{url('login-admin')}}" method="post" class="login100-form validate-form">
+                @csrf 
+                    <span class="login100-form-title p-b-49">
+                        Login
+                    </span>
 
-				</nav>
-            </header>
-            <section>				
-                <div id="container_demo" >
-                    <!-- hidden anchor to stop jump http://www.css3create.com/Astuce-Empecher-le-scroll-avec-l-utilisation-de-target#wrap4  -->
-                    <a class="hiddenanchor" id="toregister"></a>
-                    <a class="hiddenanchor" id="tologin"></a>
-                    <div id="wrapper">
-                        <div id="login" class="animate form">
-                            @include('template.utils.notif')
-                            <form  action="{{url('login-admin')}}" method="post">
-                            @csrf 
-                                <h1>Log in</h1> 
-                                <p> 
-                                    <label for="username" class="uname" data-icon="u" > Your email or username </label>
-                                    <input id="username" required="required" type="text" placeholder="Email" name="email" />
-                                </p>
-                                <p> 
-                                    <label for="password" class="youpasswd" data-icon="p"> Your password </label>
-                                    <input id="password" required="required" type="password" placeholder="Password" name="password" /> 
-                                </p>
-                                <p> 
-                                    <select name="login_as" class="form-control">
-                                        <option value="1">Pembeli</option>
-                                        <option value="2">Penjual</option>
-                                    </select>
-                                </p><br>
-                                <p class="keeplogin"> 
-									<input type="checkbox" name="loginkeeping" id="loginkeeping" value="loginkeeping" /> 
-									<label for="loginkeeping">Keep me logged in</label>
-								</p>
-                                <p class="login button"> 
-                                    <input type="submit" value="Login" /> 
-								</p>
-                                <p class="change_link">
-									Lupa Password?
-									<a href="#toregister" class="to_register">Create</a>
-								</p>
-                            </form>
-                        </div>
-
-                        <div id="register" class="animate form">
-                            <form  action="login-admin" autocomplete="on"> 
-                            <form action="{{url('login-admin')}}" method="post">
-                                @csrf
-                                <h1> Sign up </h1> 
-                                <p> 
-                                    <label for="usernamesignup" class="uname" data-icon="u">Your Name</label>
-                                    <input id="usernamesignup" name="nama" required="required" type="text" placeholder="mysuperusername690" />
-                                </p>
-                                <p> 
-                                    <label for="usernamesignup" class="uname" data-icon="u">Your username</label>
-                                    <input id="usernamesignup" name="username" required="required" type="text" placeholder="mysuperusername690" />
-                                </p>
-                                <p> 
-                                    <label for="emailsignup" class="youmail" data-icon="e" > Your email</label>
-                                    <input id="emailsignup" name="email" required="required" type="email" placeholder="mysupermail@mail.com"/> 
-                                </p>
-                                <p> 
-                                    <label for="passwordsignup" class="youpasswd" data-icon="p">Your password </label>
-                                    <input id="passwordsignup" name="password" required="required" type="password" placeholder="eg. X8df!90EO"/>
-                                </p>
-                                <p> 
-                                    <label for="passwordsignup_confirm" class="youpasswd" data-icon="p">Please confirm your password </label>
-                                    <input id="passwordsignup_confirm" name="passwordsignup_confirm" required="required" type="password" placeholder="eg. X8df!90EO"/>
-                                </p>
-                                <p class="signin button"> 
-									<input type="submit" value="Sign up"/> 
-								</p>
-                                <p class="change_link">  
-									Sudah Punya Akun?
-									<a href="#tologin" class="to_register"> log in </a>
-								</p>
-                            </form>
-                        </div>
-						
+                    <div class="wrap-input100 validate-input m-b-23" data-validate = "Username is reauired">
+                        <span class="label-input100">Email</span>
+                        <input id="username" class="input100" type="text" name="email" placeholder="Type your username">
+                        <span class="focus-input100" data-symbol="&#xf206;"></span>
                     </div>
-                </div>  
-            </section>
+
+                    <div class="wrap-input100 validate-input" data-validate="Password is required">
+                        <span class="label-input100">Password</span>
+                        <input id="password" class="input100" type="password" name="password" placeholder="Type your password">
+                        <span class="focus-input100" data-symbol="&#xf190;"></span>
+                    </div>
+                    <div class="wrap-input100 validate-input" data-validate="Password is required">
+                        <select name="login_as" class="form-control">
+                            <option value="1">Pembeli</option>
+                            <option value="0">Penjual</option>
+                        </select>
+                    </div>
+                    
+                    <div class="text-right p-t-8 p-b-31">
+                        <a href="#">
+                            Forgot password?
+                        </a>
+                    </div>
+                    
+                    <div class="container-login100-form-btn">
+                        <div class="wrap-login100-form-btn">
+                            <div class="login100-form-bgbtn"></div>
+                            <button class="login100-form-btn">
+
+                                Login
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="txt1 text-center p-t-54 p-b-20">
+                        <span>
+                            Or Sign Up Using
+                        </span>
+                    </div>
+
+                    <div class="flex-c-m">
+                        <a href="#" class="login100-social-item bg1">
+                            <i class="fa fa-facebook"></i>
+                        </a>
+
+                        <a href="#" class="login100-social-item bg2">
+                            <i class="fa fa-twitter"></i>
+                        </a>
+
+                        <a href="#" class="login100-social-item bg3">
+                            <i class="fa fa-google"></i>
+                        </a>
+                    </div>
+
+                    <div class="flex-col-c p-t-155">
+                        <span class="txt1 p-b-17">
+                            Or Sign Up Using
+                        </span>
+
+                        <a href="#" class="txt2">
+                            Sign Up
+                        </a>
+                    </div>
+                </form>
+            </div>
         </div>
-    </body>
+    </div>
+    
+
+    <div id="dropDownSelect1"></div>
+    
+<!--===============================================================================================-->
+    <script src="{{url('public')}}/login/vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+    <script src="{{url('public')}}/login/vendor/animsition/js/animsition.min.js"></script>
+<!--===============================================================================================-->
+    <script src="{{url('public')}}/login/vendor/bootstrap/js/popper.js"></script>
+    <script src="{{url('public')}}/login/vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+    <script src="{{url('public')}}/login/vendor/select2/select2.min.js"></script>
+<!--===============================================================================================-->
+    <script src="{{url('public')}}/login/vendor/daterangepicker/moment.min.js"></script>
+    <script src="{{url('public')}}/login/vendor/daterangepicker/daterangepicker.js"></script>
+<!--===============================================================================================-->
+    <script src="{{url('public')}}/login/vendor/countdowntime/countdowntime.js"></script>
+<!--===============================================================================================-->
+    <script src="{{url('public')}}/login/js/main.js"></script>
+
+</body>
 </html>

@@ -1,8 +1,9 @@
-@extends('template.base')
+@extends('template.baseclient')
 
 @section('content')
+<div class="container">
 	<div class="row">
-		<div class="col-md-12 mt-5 bg-success">
+		<div class="col-md-12 mt-5 bg-danger mb-5">
 			<div class="card">
 				<div class="card-header">
 					Tambah Data Produk<hr>
@@ -45,15 +46,16 @@
 					<div class="card-body">
 					<div class="form-group">
 						<label for="" class="control-label"> Deskripsi </label>
-						<textarea name="deskripsi" id="deskripsi" class="form-control"></textarea>
+						<textarea name="deskripsi"  class="form-control"></textarea>
 					</div>
 				</div>
-					<button class="btn btn-warning"><i class="fa fa-save">Simpan</i></button>						
+					<button class="btn btn-danger"><i class="fa fa-save">Simpan</i></button>						
 					</form>
 				</div>
 			</div> 
 		</div>
 	</div>
+</div>
 @endsection
 
 @push('style')
